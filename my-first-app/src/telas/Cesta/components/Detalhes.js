@@ -1,5 +1,6 @@
 import { TouchableOpacity } from "react-native"
 import { Button, Image, StyleSheet, View } from "react-native"
+import Botao from "./Botao"
 import { Texto } from "./Texto"
 
 export const Detalhes = ({ nome, nomeFazenda, logoFazenda, descricao,
@@ -13,9 +14,7 @@ export const Detalhes = ({ nome, nomeFazenda, logoFazenda, descricao,
         <Texto style={estilos.descricao}>{descricao}</Texto>
         <Texto style={estilos.preco}>{preco}</Texto>
         {/* <Button title={botao}/> */}
-        <TouchableOpacity style={estilos.botao}>
-            <Texto style={estilos.textoBotao}>{botao}</Texto>
-        </TouchableOpacity>
+        <Botao>{botao}</Botao>
     </>
 }
 
@@ -55,15 +54,4 @@ const estilos = StyleSheet.create({
         fontWeight: "bold",
         marginTop: 8,
     },
-    botao:{
-        marginTop:16,
-        backgroundColor:"2A9F85",
-        paddingVertical:16,
-        borderRadius:6
-    },
-    textoBotao:{
-        textAlign: "center",
-        backgroundColor:"#ffffff",
-        
-    }
 })
