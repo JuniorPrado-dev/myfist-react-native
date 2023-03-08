@@ -1,7 +1,7 @@
 import { FlatList, Image, StyleSheet, View } from "react-native";
 import { Texto } from "./Texto";
 
-export default function Item({ titulo, lista }) {
+export default function Item({ item: { nome, imagem } }) {
 
     return <View style={estilos.item} key={nome}>
         <Image style={estilos.imagem} source={imagem} />
@@ -17,7 +17,7 @@ const estilos = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: "##ECECEC",
         alignItems: "center",
-        padding:16
+        padding: 16
     },
     imagem: {
         width: 46,
